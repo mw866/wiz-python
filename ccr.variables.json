@@ -1,0 +1,21 @@
+{
+  "first": 500,
+  "orderBy": {
+    "field": "SEVERITY",
+    "direction": "ASC"
+  },
+  "filterBy": {
+    "serviceType": [
+      "Azure",
+      "GCP"
+    ],
+    "matcherType": [
+      "TERRAFORM",
+      "AZURE_RESOURCE_MANAGER",
+      "GOOGLE_CLOUD_DEPLOYMENT_MANAGER"
+    ],
+    "createdByType": [
+      "BUILT_IN"
+    ]
+  }
+}

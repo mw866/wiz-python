@@ -1,0 +1,21 @@
+query DataClassifierRulesPage(
+  $filterBy: DataClassifierFilters
+  $first: Int
+  $after: String
+) {
+  dataClassifiers(filterBy: $filterBy, first: $first, after: $after) {
+    nodes {
+      id
+      name
+      category
+      createdBy
+      severity
+      description
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+    totalCount
+  }
+}

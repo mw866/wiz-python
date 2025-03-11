@@ -1,0 +1,12 @@
+query ViewControls($first: Int, $after: String, $filterBy: ControlFilters, $orderBy: ControlOrder) {
+  controls(filterBy: $filterBy, first: $first, after: $after, orderBy: $orderBy) {
+    nodes {
+      id
+      name
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    totalCount
+  }

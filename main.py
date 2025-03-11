@@ -7,8 +7,8 @@ from wiz_sdk import WizAPIClient
 wiz = WizAPIClient()
 
 # Specify the query and variable file in environment variables
-query_file = os.environ.get("WIZ_QUERY_FILE",'ccr.graphql')
-variables_file = os.environ.get("WIZ_VARIABLES_FILE",'ccr-variables.json')
+query_file = os.environ.get("WIZ_QUERY_FILE",'dcr.graphql')
+variables_file = os.environ.get("WIZ_VARIABLES_FILE",'dcr.variables.json')
 
 QUERY = open(query_file, "r").read()
 print('{} loaded'.format(query_file))

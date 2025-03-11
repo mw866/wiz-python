@@ -1,0 +1,19 @@
+query ViewCloudEventRules($first: Int, $after: String, $filterBy: CloudEventRuleFilters, $orderBy: CloudEventRuleOrder) {
+  cloudEventRules(
+    first: $first,
+    after: $after,
+    filterBy: $filterBy,
+    orderBy: $orderBy
+    ) {
+    nodes {
+      builtInId
+      name
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+    totalCount
+  }
+}
+

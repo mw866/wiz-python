@@ -1,0 +1,8 @@
+{
+  "first": 20,
+  "filterBy": {
+    "createdBy": [
+      "BUILT_IN"
+    ]
+  }
+}

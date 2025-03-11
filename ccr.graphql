@@ -1,0 +1,23 @@
+query ViewCloudConfigurationRules($first: Int, $after: String, $filterBy: CloudConfigurationRuleFilters, $orderBy: CloudConfigurationRuleOrder) {
+  cloudConfigurationRules(
+    first: $first
+    after: $after
+    filterBy: $filterBy
+    orderBy: $orderBy
+  ) {
+    nodes {
+      shortId
+      name   
+      severity
+      serviceType
+      targetNativeType
+      matcherTypes
+      description
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+    totalCount
+  }
+}
