@@ -6,13 +6,9 @@ query ViewCloudConfigurationRules($first: Int, $after: String, $filterBy: CloudC
     orderBy: $orderBy
   ) {
     nodes {
-      shortId
+      id
       name   
-      severity
-      serviceType
-      targetNativeType
-      matcherTypes
-      description
+      type
     }
     pageInfo {
       endCursor

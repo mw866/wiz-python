@@ -1,20 +1,25 @@
 import os 
 import csv
-import time
+import argparse
 import json
+
 from wiz_sdk import WizAPIClient
 # Initialize a Wiz API Client.
 wiz = WizAPIClient()
 
-# Specify the query and variable file in environment variables
-query_file = os.environ.get("WIZ_QUERY_FILE",'dcr.graphql')
-variables_file = os.environ.get("WIZ_VARIABLES_FILE",'dcr.variables.json')
+# Set up argument parser
+parser = argparse.ArgumentParser(description="Fetch data from Wiz API and save to CSV.")
+parser.add_argument('--query', required=True, help='Path to the GraphQL query file.')
+parser.add_argument('--variables', required=True, help='Path to the JSON variables file for the query.')
+args = parser.parse_args()
 
-QUERY = open(query_file, "r").read()
-print('{} loaded'.format(query_file))
+with open(args.query, "r") as f:
+    QUERY = f.read()
+print('{} loaded'.format(args.query))
 
-VARIABLES = json.load(open(variables_file))
-print('{} loaded'.format(variables_file))
+with open(args.variables, "r") as f:
+    VARIABLES = json.load(f)
+print('{} loaded'.format(args.variables))
 
 # Execute the query.
 results = wiz.query_all_pages(QUERY, VARIABLES)

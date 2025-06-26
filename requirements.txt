@@ -1,0 +1,2 @@
+https://downloads.wiz.io/customer-files/wiz-sdk-python/wiz-sdk-0.9.5.tar.gz
+

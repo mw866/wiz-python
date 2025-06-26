@@ -1,0 +1,18 @@
+query secretDetectionRules($first: Int, $after: String, $filterBy: SecretDetectionRuleFilters) {
+  secretDetectionRules(
+    first: $first
+    after: $after
+    filterBy: $filterBy
+  ) {
+    nodes {
+      id
+      name
+      type
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+    totalCount
+  }
+}

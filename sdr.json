@@ -1,0 +1,10 @@
+{
+  "first": 500,
+  "orderBy": {
+    "field": "SEVERITY",
+    "direction": "ASC"
+  },
+  "filterBy": {
+    "enabled": true
+  }
+}
